@@ -1,0 +1,26 @@
+<html>  
+<head>  
+<title>success</title>  
+</head>  
+<body>  
+<p>File uploaded successfully</p>  
+<p>File Name: {{name}}</p>  
+
+<table border="1px" >
+    
+    {% for key, value in result.items() %}
+    <tr>   
+        <td style="padding:5px;"> {{key}}</td>
+        <td style="padding:5px;""> 
+            {% for i in value %}
+            &ensp; {{ i }} 
+                {{ value.length }} &emsp;
+            {% endfor %}
+        </td>
+    </tr>
+    {% endfor %}
+ 
+</table>
+
+</body>  
+</html>  
