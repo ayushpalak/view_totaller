@@ -1,8 +1,9 @@
 from flask import Flask,render_template,request
+import pandas as pd
+
 app = Flask(__name__)
 
 def findSum(filename, content_id):
-    import pandas as pd
     df = pd.read_csv(filename)
     df2 = df
     df['Views'] = (df['Views'].astype(str).str.replace(",","")).astype(int)
